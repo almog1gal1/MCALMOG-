@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCALMOG🍕🍔🍣</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Noto Sans Hebrew', sans-serif;
+            text-align: center;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ברוכים הבאים לוולט_אפ מה תרצו להזמין?</h1>
+
+        <!-- Food Selection -->
+        <div id="foodSelection">
+            <button id="pizzaBtn">🍕 לפיצה</button>
+            <button id="burgerBtn">🍔 להמבורגר</button>
+            <button id="sushiBtn">🍣 לסושי</button>
+        </div>
+
+        <!-- Custom Prompts -->
+        <div id="toppingPrompt" class="hidden">
+            <p id="toppingQuestion"></p>
+            <button id="toppingPromptYes">כן</button>
+            <button id="toppingPromptNo">לא</button>
+        </div>
+
+        <div id="trayPrompt" class="hidden">
+            <p>מגש רגיל או מגש משפחתי? (רגיל/משפחתי)</p>
+            <button id="trayPromptRegular">רגיל</button>
+            <button id="trayPromptFamily">משפחתי</button>
+        </div>
+
+        <div id="cutleryPrompt" class="hidden">
+            <p>תרצו סכו״ם/מפיות/צ׳ופסטיקס? (כן/לא)</p>
+            <button id="cutleryPromptYes">כן</button>
+            <button id="cutleryPromptNo">לא</button>
+        </div>
+
+        <!-- Final Summary -->
+        <h2 id="summary"></h2>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
